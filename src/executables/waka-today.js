@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 
-import { setup } from '../';
+import { getDailySummary } from '../';
 
 const execute = async () => {
   try {
-    await setup();
-    console.log('💯  - Your setup is complete!');
+    await getDailySummary();
   } catch (error) {
     console.error('😞  Rut ro, an error occurred');
     console.error(error);
