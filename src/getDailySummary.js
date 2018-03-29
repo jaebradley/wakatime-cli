@@ -1,4 +1,5 @@
 import { WakaTimeClient } from 'wakatime-client';
+import chalk from 'chalk';
 
 import setup from './setup';
 import { get } from './services/apiKeyStore';
@@ -30,11 +31,12 @@ const getDailySummary = async (date = new Date()) => {
     projects,
   } = summary.data.data[0];
 
-  console.log(`Total: ${grandTotal.text}`);
+  console.log(chalk.cyan.bold('⏳  Total'));
+  console.log(`${chalk.magenta.bold(grandTotal.text)}\n`);
 
-  generateSection({ name: 'Editors', data: editors });
-  generateSection({ name: 'Languages', data: languages });
-  generateSection({ name: 'Projects', data: projects });
+  generateSection({ name: '✍️  Editors', data: editors });
+  generateSection({ name: '🗣️  Languages', data: languages });
+  generateSection({ name: '🚀  Projects', data: projects });
 };
 
 export default getDailySummary;

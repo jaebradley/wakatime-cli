@@ -5,6 +5,7 @@ import generateTable from './generateTable';
 const generateSection = ({ name, data }) => {
   console.log(chalk.cyan.bold(name));
   generateTable(data);
+  console.log();
 };
 
 export default generateSection;
