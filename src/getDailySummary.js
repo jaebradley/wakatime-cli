@@ -4,7 +4,7 @@ import setup from './setup';
 import { get } from './services/apiKeyStore';
 import generateSection from './services/generateSection';
 
-const getDailySummary = async () => {
+const getDailySummary = async (date = new Date()) => {
   let apiKey = await get();
 
   if (!apiKey) {
@@ -13,15 +13,13 @@ const getDailySummary = async () => {
   }
 
   // PAGING HACKY AS FUCK, PAGING HACKY AS FUCK
-  const today = new Date();
-  today.setDate(today.getDate() - 1);
-  const date = today.toISOString().split('T')[0];
+  const formattedDate = date.toISOString().split('T')[0];
 
   const client = new WakaTimeClient(apiKey);
   const summary = await client.getMySummary({
     dateRange: {
-      startDate: date,
-      endDate: date,
+      startDate: formattedDate,
+      endDate: formattedDate,
     },
   });
 
