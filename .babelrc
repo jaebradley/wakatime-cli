@@ -1,5 +1,15 @@
 {
   "presets": [
     "@babel/preset-env"
+  ],
+  "env": {
+    "production": {
+      "presets": ["minify"]
+    }
+  },
+  "plugins": [
+    "@babel/transform-runtime",
+    "@babel/transform-async-to-generator",
+    "@babel/plugin-proposal-object-rest-spread",
   ]
 }
