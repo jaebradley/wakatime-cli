@@ -30,7 +30,9 @@
   },
   "dependencies": {
     "commander": "^2.15.1",
-    "inquirer": "^5.2.0"
+    "inquirer": "^5.2.0",
+    "keytar": "^4.2.1",
+    "wakatime-client": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
