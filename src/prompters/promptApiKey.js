@@ -4,8 +4,8 @@ const promptApiKey = async () => (
   inquirer.prompt([
     {
       type: 'password',
-      name: 'accessToken',
-      message: 'Enter your Wakatime API Key',
+      name: 'apiKey',
+      message: 'Enter your WakaTime API Key',
     },
   ])
 );

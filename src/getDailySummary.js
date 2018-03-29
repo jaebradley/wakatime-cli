@@ -13,7 +13,7 @@ const getDailySummary = async (date = new Date()) => {
     apiKey = await get();
   }
 
-  // PAGING HACKY AS FUCK, PAGING HACKY AS FUCK
+  // PAGING DR.HACKY AS FUCK, PAGING DR.HACKY AS FUCK
   const formattedDate = date.toISOString().split('T')[0];
 
   const client = new WakaTimeClient(apiKey);

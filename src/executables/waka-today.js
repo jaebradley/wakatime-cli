@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { getDailySummary } from '../';
 
 const execute = async () => {
