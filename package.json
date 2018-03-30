@@ -1,5 +1,5 @@
 {
-  "name": "wakatime-cli",
+  "name": "@jaebradley/wakatime-cli",
   "version": "0.0.0-development",
   "description": "CLI for the Wakatime Service",
   "main": "./build/index.js",
