@@ -14,7 +14,7 @@
     "compile:prod": "BABEL_ENV=production babel npm run compile",
     "lint": "eslint --ext .js .",
     "test": "jest --coverage --passWithNoTests",
-    "prepublishOnly": "npm run compile",
+    "prepublishOnly": "npm run compile:prod",
     "semantic-commit": "commit",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
