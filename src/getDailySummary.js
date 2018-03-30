@@ -25,11 +25,13 @@ const getDailySummary = async (date = new Date()) => {
 
   summary.data.data.forEach(({
     grand_total: grandTotal,
+    range,
     editors,
     languages,
     projects,
   }) => generateDailySummary({
     grandTotal,
+    range,
     editors,
     languages,
     projects,
