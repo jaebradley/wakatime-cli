@@ -4,11 +4,12 @@ import generateSection from './generateSection';
 
 const generateDailySummary = ({
   grandTotal,
+  range,
   editors,
   languages,
   projects,
 }) => {
-  console.log(chalk.cyan.bold('⏳  Total'));
+  console.log(chalk.cyan.bold(`⏳  Total for ${range.date}`));
   console.log(`${chalk.magenta.bold(grandTotal.text)}\n`);
 
   generateSection({ name: '✍️  Editors', data: editors });
