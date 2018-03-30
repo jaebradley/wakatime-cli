@@ -1,4 +1,9 @@
-# wakatimecli
+[![Build Status](https://travis-ci.org/jaebradley/wakatimecli.svg?branch=master)](https://travis-ci.org/jaebradley/wakatimecli)
+[![npm](https://img.shields.io/npm/v/wakatime-cli.svg)](https://www.npmjs.com/package/wakatime-cli)
+[![npm](https://img.shields.io/npm/dt/wakatime-cli.svg)](https://www.npmjs.com/package/wakatime-cli)
+
+
+# wakatime-cli
 
 * [`Introduction`](#introduction)
 * [`Installation`](#installation)
@@ -20,7 +25,7 @@ But I think it'd be pretty damn cool if I could see some of my stats in the `Ter
 ## Installation
 
 ```bash
-npm install wakatimecli -g
+npm install wakatime-cli -g
 ```
 
 ## Usage
