@@ -3,7 +3,6 @@
 [![npm](https://img.shields.io/npm/v/wakatime-cli.svg)](https://www.npmjs.com/package/wakatime-cli)
 [![npm](https://img.shields.io/npm/dt/wakatime-cli.svg)](https://www.npmjs.com/package/wakatime-cli)
 
-
 # wakatime-cli
 
 * [`Introduction`](#introduction)
