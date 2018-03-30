@@ -2,7 +2,7 @@
   "name": "wakatimecli",
   "version": "0.0.0-development",
   "description": "CLI for the Wakatime Service",
-  "main": "index.js",
+  "main": "./build/index.js",
   "bin": {
     "waka": "./build/executables/waka.js"
   },
@@ -11,7 +11,7 @@
     "codecov": "codecov",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "compile": "babel -d build/ src/ --ignore node_modules,*.test.js",
-    "compile:prod": "BABEL_ENV=production babel -d build/ src/ --ignore node_modules,*.test.js",
+    "compile:prod": "BABEL_ENV=production babel npm run compile",
     "lint": "eslint --ext .js .",
     "test": "jest --coverage --passWithNoTests",
     "prepublishOnly": "npm run compile",
@@ -25,6 +25,7 @@
   },
   "keywords": [
     "wakatime",
+    "waka time",
     "cli"
   ],
   "bugs": {
@@ -36,6 +37,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",
+    "bar-horizontal": "^0.4.0",
+    "chalk": "^2.3.2",
     "commander": "^2.15.1",
     "inquirer": "^5.2.0",
     "keytar": "^4.2.1",
