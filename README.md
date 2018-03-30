@@ -25,7 +25,7 @@ But I think it'd be pretty damn cool if I could see some of my stats in the `Ter
 ## Installation
 
 ```bash
-npm install wakatime-cli -g
+npm install @jaebradley/wakatime-cli -g
 ```
 
 ## Usage
