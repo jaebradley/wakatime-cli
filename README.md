@@ -4,12 +4,12 @@
 * [`Installation`](#installation)
 * [`Usage`](#usage)
   * [`Setup`](#setup)
-  * [`Today's Summary`](#todayssummary)
-  * [`Yesterday's Summary`](#yesterdayssummary)
+  * [`Today's Summary`](#todays-summary)
+  * [`Yesterday's Summary`](#yesterdays-summary)
 
 ## Introduction
 
-![waka-flocka-flame](https://media.giphy.com/media/4FRN8FpBdaJYA/giphy.gif)<sup>[1](#waka-flocka-flame)</sup>
+![waka-flocka-flame](https://media.giphy.com/media/4FRN8FpBdaJYA/giphy.gif)<sup>[1](#waka-flocka-flame-footnote)</sup>
 
 As a mega-nerd (proven by my use of the term, "mega-nerd"), I am a big fan of [the `WakaTime` service](https://wakatime.com) for tracking my coding.
 
@@ -43,6 +43,8 @@ Then, use the `waka setup` command to set your API key for the `wakatimecli` pro
 waka today
 ```
 
+![alt-text](https://imgur.com/nfJ4clj.png)
+
 Outputs the summary stats (total time recorded, editors, languages, and projects) for the current day using [the `summaries` API](https://wakatime.com/developers#summaries).
 
 ### Yesterday's Summary
@@ -51,6 +53,6 @@ Outputs the summary stats (total time recorded, editors, languages, and projects
 waka yesterday
 ```
 
-Like [`Today's Summary`](#todayssummary) but, like, the day before.
+Like [`Today's Summary`](#todays-summary) but, like, the day before.
 
 <a name="waka-flocka-flame-footnote"><sup>1</sup></a> Get it? Cause that's [Waka Flocka Flame](https://en.wikipedia.org/wiki/Waka_Flocka_Flame) and I like bad jokes. You get it.
