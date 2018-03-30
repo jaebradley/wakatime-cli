@@ -2,6 +2,9 @@
   "name": "@jaebradley/wakatime-cli",
   "version": "0.0.0-development",
   "description": "CLI for the Wakatime Service",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./build/index.js",
   "bin": {
     "waka": "./build/executables/waka.js"
