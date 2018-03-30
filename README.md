@@ -60,4 +60,6 @@ waka yesterday
 
 Like [`Today's Summary`](#todays-summary) but, like, the day before.
 
+### Footnotes
+
 <a name="waka-flocka-flame-footnote"><sup>1</sup></a> Get it? Cause that's [Waka Flocka Flame](https://en.wikipedia.org/wiki/Waka_Flocka_Flame) and I like bad jokes. You get it.
