@@ -1,7 +1,7 @@
-[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/wakatimecli.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/jaebradley/wakatimecli.svg?branch=master)](https://travis-ci.org/jaebradley/wakatimecli)
-[![npm](https://img.shields.io/npm/v/wakatime-cli.svg)](https://www.npmjs.com/package/wakatime-cli)
-[![npm](https://img.shields.io/npm/dt/wakatime-cli.svg)](https://www.npmjs.com/package/wakatime-cli)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/wakatime-cli.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/jaebradley/wakatime-cli.svg?branch=master)](https://travis-ci.org/jaebradley/wakatime-cli)
+[![npm](https://img.shields.io/npm/v/@jaebradley/wakatime-cli.svg)](https://www.npmjs.com/package/@jaebradley/wakatime-cli)
+[![npm](https://img.shields.io/npm/dt/@jaebradley/wakatime-cli.svg)](https://www.npmjs.com/package/@jaebradley/wakatime-cli)
 
 # wakatime-cli
 
