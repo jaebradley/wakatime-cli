@@ -9,4 +9,5 @@ program.version(pkg.version)
   .command('setup', 'Add API Key')
   .command('today', 'Get Daily Summary')
   .command('yesterday', 'Get Summary for Yesterday')
+  .command('week', 'Get Summary for Week')
   .parse(process.argv);
