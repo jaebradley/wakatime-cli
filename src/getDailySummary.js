@@ -23,7 +23,7 @@ const getDailySummary = async (date = new Date()) => {
     },
   });
 
-  summary.data.data.forEach(({
+  summary.data.forEach(({
     grand_total: grandTotal,
     range,
     editors,
