@@ -5,7 +5,7 @@ import aggregateDailyStatistics from './aggregateDailyStatistics';
 import formatAggregatedStatistics from './formatAggregatedStatistics';
 
 const generateWeeklySummary = (data) => {
-  const grandTotals = data.data.data.map((day) => {
+  const grandTotals = data.data.map((day) => {
     const {
       range,
       grand_total: grandTotal,
@@ -28,7 +28,7 @@ const generateWeeklySummary = (data) => {
     editors,
     languages,
     projects,
-  } = formatAggregatedStatistics(aggregateDailyStatistics(data.data.data));
+  } = formatAggregatedStatistics(aggregateDailyStatistics(data.data));
   const weeklyGrandTotal = grandTotals
     .reduce((total, grandTotal) => total + grandTotal.totalSeconds, 0);
   const formattedWeeklyGrandTotal = formatTime(new Date(weeklyGrandTotal * 1000));
