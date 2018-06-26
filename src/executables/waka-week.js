@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { getWeeklySummary } from '../';
+import { getWeeklySummary } from '..';
 
 const execute = async () => {
   try {
