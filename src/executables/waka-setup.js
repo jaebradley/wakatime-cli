@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { setup } from '../';
+import { setup } from '..';
 
 const execute = async () => {
   try {
