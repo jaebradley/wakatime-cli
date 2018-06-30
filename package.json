@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",
-    "ajv": "^5.5.2",
+    "ajv": "^6.5.2",
     "axios": "^0.18.0",
     "bar-horizontal": "^0.4.0",
     "chalk": "^2.3.2",
