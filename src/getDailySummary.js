@@ -4,7 +4,7 @@ import setup from './setup';
 import { get } from './services/apiKeyStore';
 import generateDailySummary from './services/generateDailySummary';
 
-const getDailySummary = async (date = new Date()) => {
+const getDailySummary = async (date = ''+new Date()) => {
   let apiKey = await get();
 
   if (!apiKey) {
