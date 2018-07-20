@@ -1,12 +1,18 @@
 import { WakaTimeClient } from 'wakatime-client';
+import {
+  DateTime,
+} from 'luxon';
 
 import setup from './setup';
 import { get } from './services/apiKeyStore';
 import generateDailySummary from './services/generateDailySummary';
 import getRegex from './services/getRegex';
+import {
+  DATE_FORMAT,
+} from './constants';
 
 const getDailySummary = async ({
-  date = new Date(),
+  date = DateTime.local(),
   editorsFilter = null,
   languagesFilter = null,
   projectsFilter = null,
@@ -21,10 +27,15 @@ const getDailySummary = async ({
     apiKey = await get();
   }
 
-  // PAGING DR.HACKY AS FUCK, PAGING DR.HACKY AS FUCK
-  const formattedDate = date.toISOString().split('T')[0];
-
   const client = new WakaTimeClient(apiKey);
+  const {
+    data,
+  } = await client.getMe();
+  const {
+    timezone,
+  } = data;
+  const localizedDate = date.setZone(timezone);
+  const formattedDate = localizedDate.toFormat(DATE_FORMAT);
   const summary = await client.getMySummary({
     dateRange: {
       startDate: formattedDate,

@@ -1,8 +1,14 @@
 import { WakaTimeClient } from 'wakatime-client';
+import {
+  DateTime,
+} from 'luxon';
 
 import setup from './setup';
 import { get } from './services/apiKeyStore';
 import generateWeeklySummary from './services/generateWeeklySummary';
+import {
+  DATE_FORMAT,
+} from './constants';
 
 const getWeeklySummary = async ({
   editorsFilter = null,
@@ -19,12 +25,20 @@ const getWeeklySummary = async ({
     apiKey = await get();
   }
 
-  const startDate = new Date(new Date().setDate(new Date().getDate() - 6));
-  const endDate = new Date();
-  const formattedStartDate = startDate.toISOString().split('T')[0];
-  const formattedEndDate = endDate.toISOString().split('T')[0];
-
   const client = new WakaTimeClient(apiKey);
+  const {
+    data,
+  } = await client.getMe();
+  const {
+    timezone,
+  } = data;
+
+  const endDate = DateTime.local();
+  const localizedEndDate = endDate.setZone(timezone);
+  const localizedStartDate = localizedEndDate.minus({ days: 6 });
+  const formattedStartDate = localizedStartDate.toFormat(DATE_FORMAT);
+  const formattedEndDate = localizedEndDate.toFormat(DATE_FORMAT);
+
   const summary = await client.getMySummary({
     dateRange: {
       startDate: formattedStartDate,

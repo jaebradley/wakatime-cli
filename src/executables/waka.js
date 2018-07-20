@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 import program from 'commander';
+import {
+  DateTime,
+} from 'luxon';
 
 import pkg from '../../package.json';
 import {
@@ -53,7 +56,7 @@ program
   .action(async (args) => {
     try {
       // GROSS
-      const yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+      const yesterday = DateTime.local().minus({ days: 1 });
       await getDailySummary({
         date: yesterday,
         editorsFilter: args.editorsFilter,
