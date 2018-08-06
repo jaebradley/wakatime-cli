@@ -12,10 +12,10 @@ const getWeeklySummary = async () => {
     apiKey = await get();
   }
 
-  const startDate = new Date(new Date().setDate(('' + new Date()).getDate() - 6));
-  const endDate = '' + new Date();
-  const formattedStartDate = startDate.toISOString().split('T')[0];
-  const formattedEndDate = endDate.toISOString().split('T')[0];
+  const startDate = new Date(new Date().setDate(new Date().getDate() - 6));
+  const endDate = new Date();
+  const formattedStartDate = startDate.toLocaleDateString();
+  const formattedEndDate = endDate.toLocaleDateString();
 
   const client = new WakaTimeClient(apiKey);
   const summary = await client.getMySummary({
