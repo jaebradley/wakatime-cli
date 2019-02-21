@@ -42,14 +42,14 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.42",
-    "ajv": "^6.5.2",
+    "@babel/runtime": "^7.3.1",
+    "ajv": "^6.9.1",
     "axios": "^0.18.0",
     "bar-horizontal": "^0.4.0",
-    "chalk": "^2.3.2",
-    "commander": "^2.15.1",
-    "inquirer": "^6.0.0",
-    "keytar": "^4.2.1",
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2",
+    "keytar": "^4.4.0",
     "wakatime-client": "^2.0.2"
   },
   "devDependencies": {
