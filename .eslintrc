@@ -2,5 +2,13 @@
   "extends": "airbnb-base",
   "env": {
     "jest": true
-  }
+  },
+  "overrides": [{
+    "files": [
+      "src/executables/*.js"
+    ],
+    "rules": {
+      "no-console": "off"
+    }
+  }]
 }

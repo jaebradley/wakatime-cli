@@ -3,8 +3,14 @@ import { WakaTimeClient } from 'wakatime-client';
 import setup from './setup';
 import { get } from './services/apiKeyStore';
 import generateDailySummary from './services/generateDailySummary';
+import getRegex from './services/getRegex';
 
-const getDailySummary = async (date = new Date()) => {
+const getDailySummary = async ({
+  date = new Date(),
+  editorsFilter = null,
+  languagesFilter = null,
+  projectsFilter = null,
+}) => {
   let apiKey = await get();
 
   if (!apiKey) {
@@ -23,8 +29,28 @@ const getDailySummary = async (date = new Date()) => {
     },
   });
 
-  summary.data.forEach(({
+  const filteredData = summary.data.map(({
     grand_total: grandTotal,
+    range,
+    editors,
+    languages,
+    projects,
+  }) => ({
+    grandTotal,
+    range,
+    editors: editors.filter(
+      ({ name }) => editorsFilter == null || getRegex(editorsFilter).test(name),
+    ),
+    languages: languages.filter(
+      ({ name }) => languagesFilter == null || getRegex(languagesFilter).test(name),
+    ),
+    projects: projects.filter(
+      ({ name }) => projectsFilter == null || getRegex(projectsFilter).test(name),
+    ),
+  }));
+
+  filteredData.forEach(({
+    grandTotal,
     range,
     editors,
     languages,

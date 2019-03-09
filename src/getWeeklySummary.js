@@ -4,7 +4,11 @@ import setup from './setup';
 import { get } from './services/apiKeyStore';
 import generateWeeklySummary from './services/generateWeeklySummary';
 
-const getWeeklySummary = async () => {
+const getWeeklySummary = async ({
+  editorsFilter = null,
+  languagesFilter = null,
+  projectsFilter = null,
+}) => {
   let apiKey = await get();
 
   if (!apiKey) {
@@ -24,7 +28,12 @@ const getWeeklySummary = async () => {
       endDate: formattedEndDate,
     },
   });
-  generateWeeklySummary(summary);
+  generateWeeklySummary({
+    data: summary.data,
+    editorsFilter,
+    languagesFilter,
+    projectsFilter,
+  });
 };
 
 export default getWeeklySummary;
