@@ -5,12 +5,14 @@
 
 # wakatime-cli
 
-* [`Introduction`](#introduction)
-* [`Installation`](#installation)
-* [`Usage`](#usage)
-  * [`Setup`](#setup)
-  * [`Today's Summary`](#todays-summary)
-  * [`Yesterday's Summary`](#yesterdays-summary)
+- [wakatime-cli](#wakatime-cli)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Setup](#setup)
+    - [Summary Options](#summary-options)
+    - [Today's Summary](#todays-summary)
+    - [Footnotes](#footnotes)
 
 ## Introduction
 
@@ -42,6 +44,21 @@ The `wakatimecli` uses [the `WakaTime` API](https://wakatime.com/developers) to 
 
 Then, use the `waka setup` command to set your API key for the `wakatimecli` project, which will store your key using [`node-keytar`](https://github.com/atom/node-keytar) (so in `Keychain` on OSX, for example).
 
+### Summary Options
+
+There are a couple notable command line options for filtering summary data.
+
+However, filtering only impacts the summary data for the given section. So filtering by a particular project name will only change the output data for the `Projects` section and won't impact the `Editors` or `Languages` section.
+
+This is primarily due to the output from the Wakatime `/summaries` endpoint which doesn't return linked data across editors, projects, and languages.
+
+- `-e <Some Editors Filter>` - filters the editors in the `Editors` section
+  - Supports regex, so `-e /vs co.*/i`, for example (which would match `VS Code`)
+- `-l <Some Languages Filter>` - filters the languages in the `Languages` section
+  - Supports regex, so `-l /java.*/i`, for example (which would match `Java` and `JavaScript`)
+- `-p <Some Projects Filter>` - filters the projects in the `Projects` section
+  - Supports regex, so `-p /waka.*/i`, for example (which would match `wakatime-cli` and `wakatime-client`)
+
 ### Today's Summary
 
 ```bash
@@ -51,8 +68,6 @@ waka today
 ![alt-text](https://imgur.com/nfJ4clj.png)
 
 Outputs the summary stats (total time recorded, editors, languages, and projects) for the current day using [the `summaries` API](https://wakatime.com/developers#summaries).
-
-### Yesterday's Summary
 
 ```bash
 waka yesterday

@@ -1,11 +1,18 @@
+/* eslint-disable no-console */
+
 import chalk from 'chalk';
 import generateSection from './generateSection';
 import formatTime from './formatTime';
 import aggregateDailyStatistics from './aggregateDailyStatistics';
 import formatAggregatedStatistics from './formatAggregatedStatistics';
 
-const generateWeeklySummary = (data) => {
-  const grandTotals = data.data.map((day) => {
+const generateWeeklySummary = ({
+  data,
+  editorsFilter = null,
+  languagesFilter = null,
+  projectsFilter = null,
+}) => {
+  const grandTotals = data.map((day) => {
     const {
       range,
       grand_total: grandTotal,
@@ -28,7 +35,15 @@ const generateWeeklySummary = (data) => {
     editors,
     languages,
     projects,
-  } = formatAggregatedStatistics(aggregateDailyStatistics(data.data));
+  } = formatAggregatedStatistics(
+    aggregateDailyStatistics({
+      data,
+      editorsFilter,
+      languagesFilter,
+      projectsFilter,
+    }),
+  );
+
   const weeklyGrandTotal = grandTotals
     .reduce((total, grandTotal) => total + grandTotal.totalSeconds, 0);
   const formattedWeeklyGrandTotal = formatTime(new Date(weeklyGrandTotal * 1000));
