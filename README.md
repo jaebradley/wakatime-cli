@@ -52,11 +52,11 @@ However, filtering only impacts the summary data for the given section. So filte
 
 This is primarily due to the output from the Wakatime `/summaries` endpoint which doesn't return linked data across editors, projects, and languages.
 
-- `-e <Some Editor Filter>` - filters the editors in the `Editor` section
+- `-e <Some Editors Filter>` - filters the editors in the `Editors` section
   - Supports regex, so `-e /vs co.*/i`, for example (which would match `VS Code`)
-- `-l <Some Languages Filter>` - filters the languages in the `Language` section
+- `-l <Some Languages Filter>` - filters the languages in the `Languages` section
   - Supports regex, so `-l /java.*/i`, for example (which would match `Java` and `JavaScript`)
-- `-p <Some Projects Filter>` - filters the projects in the `Project` section
+- `-p <Some Projects Filter>` - filters the projects in the `Projects` section
   - Supports regex, so `-p /waka.*/i`, for example (which would match `wakatime-cli` and `wakatime-client`)
 
 ### Today's Summary
