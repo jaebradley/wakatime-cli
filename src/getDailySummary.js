@@ -10,6 +10,9 @@ const getDailySummary = async ({
   editorsFilter = null,
   languagesFilter = null,
   projectsFilter = null,
+  showEditors = null,
+  showLanguages = null,
+  showProjects = null,
 }) => {
   let apiKey = await get();
 
@@ -61,6 +64,9 @@ const getDailySummary = async ({
     editors,
     languages,
     projects,
+    showEditors,
+    showLanguages,
+    showProjects,
   }));
 };
 

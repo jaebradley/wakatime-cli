@@ -8,6 +8,9 @@ const getWeeklySummary = async ({
   editorsFilter = null,
   languagesFilter = null,
   projectsFilter = null,
+  showEditors = null,
+  showLanguages = null,
+  showProjects = null,
 }) => {
   let apiKey = await get();
 
@@ -33,6 +36,9 @@ const getWeeklySummary = async ({
     editorsFilter,
     languagesFilter,
     projectsFilter,
+    showEditors,
+    showLanguages,
+    showProjects,
   });
 };
 
