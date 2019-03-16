@@ -11,6 +11,9 @@ const generateWeeklySummary = ({
   editorsFilter = null,
   languagesFilter = null,
   projectsFilter = null,
+  showEditors = null,
+  showLanguages = null,
+  showProjects = null,
 }) => {
   const grandTotals = data.map((day) => {
     const {
@@ -48,11 +51,23 @@ const generateWeeklySummary = ({
     .reduce((total, grandTotal) => total + grandTotal.totalSeconds, 0);
   const formattedWeeklyGrandTotal = formatTime(new Date(weeklyGrandTotal * 1000));
 
+  const showAllSections = showEditors == null && showLanguages == null && showProjects == null;
+
   console.log(chalk.cyan.bold(`⏳  Total For Past 7 Days: ${chalk.magenta.bold(formattedWeeklyGrandTotal)}\n`));
+
   generateSection({ name: '📅  By Day', data: grandTotals });
-  generateSection({ name: '✍️  Editors', data: editors });
-  generateSection({ name: '🗣️  Languages', data: languages });
-  generateSection({ name: '🚀  Projects', data: projects });
+
+  if (showAllSections || (!showAllSections && showEditors)) {
+    generateSection({ name: '✍️  Editors', data: editors });
+  }
+
+  if (showAllSections || (!showAllSections && showLanguages)) {
+    generateSection({ name: '🗣️  Languages', data: languages });
+  }
+
+  if (showAllSections || (!showAllSections && showProjects)) {
+    generateSection({ name: '🚀  Projects', data: projects });
+  }
 };
 
 export default generateWeeklySummary;

@@ -19,8 +19,11 @@ program
 program
   .command('today')
   .description('Get Daily Summary')
+  .option('-E, --showEditors', 'Show editors section')
   .option('-e, --editorsFilter <editorFilter>', 'Filter editors by their name using regex')
+  .option('-L, --showLanguages', 'Show languages section')
   .option('-l, --languagesFilter <languagesFilter>', 'Filters languages by their name using regex')
+  .option('-P, --showProjects', 'Show projects section')
   .option('-p, --projectsFilter <projectsFilter', 'Filters projects by their name using regex')
   .action(async (args) => {
     try {
@@ -28,6 +31,9 @@ program
         editorsFilter: args.editorsFilter,
         languagesFilter: args.languagesFilter,
         projectsFilter: args.projectsFilter,
+        showEditors: args.showEditors,
+        showLanguages: args.showLanguages,
+        showProjects: args.showProjects,
       });
     } catch (error) {
       console.error('😞  Rut ro, an error occurred');
@@ -38,8 +44,11 @@ program
 program
   .command('yesterday')
   .description('Get Summary for Yesterday')
+  .option('-E, --showEditors', 'Show editors section')
   .option('-e, --editorsFilter <editorFilter>', 'Filter editors by their name using regex')
+  .option('-L, --showLanguages', 'Show languages section')
   .option('-l, --languagesFilter <languagesFilter>', 'Filters languages by their name using regex')
+  .option('-P, --showProjects', 'Show projects section')
   .option('-p, --projectsFilter <projectsFilter', 'Filters projects by their name using regex')
   .action(async (args) => {
     try {
@@ -50,6 +59,9 @@ program
         editorsFilter: args.editorsFilter,
         languagesFilter: args.languagesFilter,
         projectsFilter: args.projectsFilter,
+        showEditors: args.showEditors,
+        showLanguages: args.showLanguages,
+        showProjects: args.showProjects,
       });
     } catch (error) {
       console.error('😞  Rut ro, an error occurred');
@@ -60,8 +72,11 @@ program
 program
   .command('week')
   .description('Get Summary for Week')
+  .option('-E, --showEditors', 'Show editors section')
   .option('-e, --editorsFilter <editorFilter>', 'Filter editors by their name using regex')
+  .option('-L, --showLanguages', 'Show languages section')
   .option('-l, --languagesFilter <languagesFilter>', 'Filters languages by their name using regex')
+  .option('-P, --showProjects', 'Show projects section')
   .option('-p, --projectsFilter <projectsFilter', 'Filters projects by their name using regex')
   .action(async (args) => {
     try {
@@ -69,6 +84,9 @@ program
         editorsFilter: args.editorsFilter,
         languagesFilter: args.languagesFilter,
         projectsFilter: args.projectsFilter,
+        showEditors: args.showEditors,
+        showLanguages: args.showLanguages,
+        showProjects: args.showProjects,
       });
     } catch (error) {
       console.error('😞  Rut ro, an error occurred');

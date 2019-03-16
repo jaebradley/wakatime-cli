@@ -11,6 +11,8 @@
   - [Usage](#usage)
     - [Setup](#setup)
     - [Summary Options](#summary-options)
+    - [Section Filters](#section-filters)
+    - [Section Options](#section-options)
     - [Today's Summary](#todays-summary)
     - [Footnotes](#footnotes)
 
@@ -46,6 +48,8 @@ Then, use the `waka setup` command to set your API key for the `wakatimecli` pro
 
 ### Summary Options
 
+### Section Filters
+
 There are a couple notable command line options for filtering summary data.
 
 However, filtering only impacts the summary data for the given section. So filtering by a particular project name will only change the output data for the `Projects` section and won't impact the `Editors` or `Languages` section.
@@ -58,6 +62,16 @@ This is primarily due to the output from the Wakatime `/summaries` endpoint whic
   - Supports regex, so `-l /java.*/i`, for example (which would match `Java` and `JavaScript`)
 - `-p <Some Projects Filter>` - filters the projects in the `Projects` section
   - Supports regex, so `-p /waka.*/i`, for example (which would match `wakatime-cli` and `wakatime-client`)
+
+### Section Options
+
+You might want to restrict the sections that are outputted (if you want to _only_ see your language statistics, for example).
+
+Here are the following ways to toggle specific sections. If no options are specified, **all sections** will be displayed.
+
+- `-E` - show the `Editors` section
+- `-L` - show the `Languages` section
+- `-P` - show the `Projects` section
 
 ### Today's Summary
 
