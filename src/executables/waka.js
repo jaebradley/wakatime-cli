@@ -9,6 +9,7 @@ import pkg from '../../package.json';
 import {
   getDailySummary,
   getWeeklySummary,
+  setup,
 } from '..';
 
 program
@@ -17,7 +18,16 @@ program
 
 program
   .command('setup')
-  .description('Add API Key');
+  .description('Add API Key')
+  .action(async () => {
+    try {
+      await setup();
+      console.log('💯  - Your setup is complete!');
+    } catch (error) {
+      console.error('😞  Rut ro, an error occurred');
+      console.error(error);
+    }
+  });
 
 program
   .command('today')
