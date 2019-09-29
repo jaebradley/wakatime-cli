@@ -1,7 +1,7 @@
 import formatTime from './formatTime';
 
-const formatTotals = totals => (
-  Object.keys(totals).map(name => ({
+const formatTotals = (totals) => (
+  Object.keys(totals).map((name) => ({
     name,
     text: formatTime(new Date(totals[name] * 1000)),
     percent: totals[name],
