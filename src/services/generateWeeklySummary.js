@@ -2,6 +2,7 @@
 
 import chalk from 'chalk';
 import generateSection from './generateSection';
+import shouldGenerateSection from './shouldGenerateSection';
 import formatTime from './formatTime';
 import aggregateDailyStatistics from './aggregateDailyStatistics';
 import formatAggregatedStatistics from './formatAggregatedStatistics';
@@ -57,15 +58,25 @@ const generateWeeklySummary = ({
 
   generateSection({ name: '📅  By Day', data: grandTotals });
 
-  if (showAllSections || (!showAllSections && showEditors)) {
+  // TODO @jaebradley: consolidate this with generateDailySummary
+
+  if (shouldGenerateSection({ data: editors, showAllSections, showSpecificSection: showEditors })) {
     generateSection({ name: '✍️  Editors', data: editors });
   }
 
-  if (showAllSections || (!showAllSections && showLanguages)) {
+  if (shouldGenerateSection({
+    data: languages,
+    showAllSections,
+    showSpecificSection: showLanguages,
+  })) {
     generateSection({ name: '🗣️  Languages', data: languages });
   }
 
-  if (showAllSections || (!showAllSections && showProjects)) {
+  if (shouldGenerateSection({
+    data: projects,
+    showAllSections,
+    showSpecificSection: showProjects,
+  })) {
     generateSection({ name: '🚀  Projects', data: projects });
   }
 };

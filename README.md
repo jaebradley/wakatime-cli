@@ -73,6 +73,8 @@ Here are the following ways to toggle specific sections. If no options are speci
 - `-L` - show the `Languages` section
 - `-P` - show the `Projects` section
 
+If data is not available for a given section, it will _not_ be displayed even if that option was specified.
+
 ### Today's Summary
 
 ```bash
