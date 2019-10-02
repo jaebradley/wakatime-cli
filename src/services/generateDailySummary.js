@@ -3,6 +3,7 @@
 import chalk from 'chalk';
 
 import generateSection from './generateSection';
+import shouldGenerateSection from './shouldGenerateSection';
 
 const generateDailySummary = ({
   grandTotal,
@@ -19,15 +20,23 @@ const generateDailySummary = ({
   console.log(chalk.cyan.bold(`⏳  Total for ${range.date}`));
   console.log(`${chalk.magenta.bold(grandTotal.text)}\n`);
 
-  if (showAllSections || (!showAllSections && showEditors)) {
+  if (shouldGenerateSection({ data: editors, showAllSections, showSpecificSection: showEditors })) {
     generateSection({ name: '✍️  Editors', data: editors });
   }
 
-  if (showAllSections || (!showAllSections && showLanguages)) {
+  if (shouldGenerateSection({
+    data: languages,
+    showAllSections,
+    showSpecificSection: showLanguages,
+  })) {
     generateSection({ name: '🗣️  Languages', data: languages });
   }
 
-  if (showAllSections || (!showAllSections && showProjects)) {
+  if (shouldGenerateSection({
+    data: projects,
+    showAllSections,
+    showSpecificSection: showProjects,
+  })) {
     generateSection({ name: '🚀  Projects', data: projects });
   }
 };
