@@ -46,7 +46,7 @@
     "ajv": "^6.10.2",
     "axios": "^0.19.0",
     "bar-horizontal": "^0.4.0",
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "commander": "^3.0.2",
     "inquirer": "^7.0.0",
     "keytar": "^4.13.0",
