@@ -7,22 +7,22 @@
   },
   "main": "./build/index.js",
   "engines": {
-    "node": "^8 || ^10 || ^11"
+    "node": ">=8.0.0"
   },
   "bin": {
     "waka": "./build/executables/waka.js"
   },
   "global": true,
   "scripts": {
-    "codecov": "codecov",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "compile": "babel -d build/ src/ --ignore node_modules,*.test.js",
+    "codecov": "npx codecov",
+    "commitmsg": "npx commitlint -e $GIT_PARAMS",
+    "compile": "npx babel -d build/ src/ --ignore node_modules,*.test.js",
     "compile:prod": "BABEL_ENV=production npm run compile",
-    "lint": "eslint --ext .js .",
-    "test": "jest --coverage --passWithNoTests",
+    "lint": "npx eslint --ext .js .",
+    "test": "npx jest --coverage --passWithNoTests",
     "prepublishOnly": "npm run compile:prod",
-    "semantic-commit": "commit",
-    "semantic-release": "semantic-release"
+    "semantic-commit": "npx commit",
+    "semantic-release": "npx semantic-release"
   },
   "license": "MIT",
   "repository": {
@@ -42,37 +42,40 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.2",
-    "ajv": "^6.10.2",
-    "axios": "^0.19.0",
+    "@babel/runtime": "^7.8.4",
+    "ajv": "^6.11.0",
+    "axios": "^0.19.2",
     "bar-horizontal": "^0.4.0",
-    "chalk": "^2.4.2",
-    "commander": "^3.0.2",
-    "inquirer": "^7.0.0",
-    "keytar": "^4.13.0",
-    "luxon": "^1.19.3",
-    "wakatime-client": "^2.0.3"
+    "chalk": "^3.0.0",
+    "commander": "^4.1.0",
+    "inquirer": "^7.0.4",
+    "keytar": "^5.1.0",
+    "luxon": "^1.22.0",
+    "wakatime-client": "^2.0.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
-    "@babel/plugin-transform-async-to-generator": "^7.5.0",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-angular": "^8.2.0",
-    "@commitlint/prompt": "^8.2.0",
-    "@commitlint/prompt-cli": "^8.2.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "@commitlint/prompt": "^8.3.5",
+    "@commitlint/prompt-cli": "^8.3.5",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.1.0",
     "babel-preset-minify": "^0.5.1",
-    "codecov": "^3.6.1",
-    "eslint": "^6.4.0",
+    "bufferutil": "^4.0.1",
+    "canvas": "^2.6.1",
+    "codecov": "^3.6.4",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "husky": "^3.0.7",
-    "jest": "^24.9.0",
-    "semantic-release": "^15.13.24"
+    "eslint-plugin-import": "^2.20.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "semantic-release": "^17.0.2",
+    "utf-8-validate": "^5.0.2"
   }
 }
