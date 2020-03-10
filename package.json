@@ -48,7 +48,7 @@
     "bar-horizontal": "^0.4.0",
     "chalk": "^3.0.0",
     "commander": "^4.1.1",
-    "inquirer": "^7.0.4",
+    "inquirer": "^7.1.0",
     "keytar": "^5.4.0",
     "luxon": "^1.22.0",
     "wakatime-client": "^2.5.0"
