@@ -47,7 +47,7 @@
     "axios": "^0.19.2",
     "bar-horizontal": "^0.4.0",
     "chalk": "^3.0.0",
-    "commander": "^4.1.1",
+    "commander": "^5.1.0",
     "inquirer": "^7.0.4",
     "keytar": "^5.4.0",
     "luxon": "^1.22.0",
