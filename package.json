@@ -75,7 +75,7 @@
     "eslint-plugin-import": "^2.20.1",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "semantic-release": "^17.0.4",
+    "semantic-release": "^17.0.8",
     "utf-8-validate": "^5.0.2"
   }
 }
