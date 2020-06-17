@@ -1,3 +1,4 @@
+![Wakatime CLI](https://github.com/jaebradley/wakatime-cli/workflows/Wakatime%20CLI/badge.svg)
 [![npm](https://img.shields.io/npm/v/@jaebradley/wakatime-cli.svg)](https://www.npmjs.com/package/@jaebradley/wakatime-cli)
 [![npm](https://img.shields.io/npm/dt/@jaebradley/wakatime-cli.svg)](https://www.npmjs.com/package/@jaebradley/wakatime-cli)
 
