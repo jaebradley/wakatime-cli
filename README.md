@@ -1,5 +1,4 @@
-[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/wakatime-cli.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/jaebradley/wakatime-cli.svg?branch=master)](https://travis-ci.org/jaebradley/wakatime-cli)
+![Wakatime CLI](https://github.com/jaebradley/wakatime-cli/workflows/Wakatime%20CLI/badge.svg)
 [![npm](https://img.shields.io/npm/v/@jaebradley/wakatime-cli.svg)](https://www.npmjs.com/package/@jaebradley/wakatime-cli)
 [![npm](https://img.shields.io/npm/dt/@jaebradley/wakatime-cli.svg)](https://www.npmjs.com/package/@jaebradley/wakatime-cli)
 
