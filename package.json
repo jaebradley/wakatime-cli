@@ -50,7 +50,7 @@
     "commander": "^5.1.0",
     "inquirer": "^7.3.2",
     "keytar": "^6.0.1",
-    "luxon": "^1.24.1",
+    "luxon": "^1.25.0",
     "wakatime-client": "^2.6.0"
   },
   "devDependencies": {
