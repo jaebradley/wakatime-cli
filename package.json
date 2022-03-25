@@ -22,7 +22,9 @@
     "test": "npx jest --coverage --passWithNoTests",
     "prepublishOnly": "npm run compile:prod",
     "semantic-commit": "npx commit",
-    "semantic-release": "npx semantic-release"
+    "semantic-release": "npx semantic-release",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "license": "MIT",
   "repository": {
@@ -51,7 +53,8 @@
     "inquirer": "^7.3.2",
     "keytar": "^6.0.1",
     "luxon": "^1.24.1",
-    "wakatime-client": "^2.6.0"
+    "wakatime-client": "^2.6.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -77,5 +80,6 @@
     "jest": "^26.0.1",
     "semantic-release": "^17.0.8",
     "utf-8-validate": "^5.0.2"
-  }
+  },
+  "snyk": true
 }
